@@ -17,8 +17,8 @@ from django.contrib import admin
 from django.urls import path
 from . import  views
 
-from django.view.static import serve
-from django.conf.urls import urlpip freeze > requirements.txt
+
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -26,6 +26,5 @@ urlpatterns = [
     path('analyze', views.analyze, name='analyze'),
 
     
-    url(r'^media/(?P<path>.*)$', serve,{'document_root':       settings.MEDIA_ROOT}), 
-    url(r'^static/(?P<path>.*)$', serve,{'document_root': settings.STATIC_ROOT}), 
+   
 ]
